@@ -1,0 +1,58 @@
+<meta charset="utf-8">
+<h1>
+	Índice de Masa Corporal
+</h1>
+<script>
+	function saltarlinea() {
+		document.write("<br>");
+	}
+	function imprimir(texto) {
+		document.write(texto);
+	}
+	function IMC(peso,altura) {
+		imc = peso / (altura * altura);
+		return imc;
+	}
+	var peso1 = 99;
+	var altura1 = 1.83;
+	var peso2 = 80;
+	var altura2 = 1.8;
+	imprimir("Forma 1:")
+	saltarlinea();
+	imc1 = peso1 / (altura1 * altura1);
+	imprimir("Mi IMC es: " + imc1);
+	saltarlinea();
+	imprimir("Forma 2:")
+	saltarlinea();
+	imcomar = IMC(peso1,altura1);
+	imprimir("Mi IMC es: " + imcomar);
+	saltarlinea();
+	imprimir("Forma 3:");
+	saltarlinea();
+	imprimir("El IMC es: " + IMC(peso2,altura2));
+	saltarlinea();
+	imprimir("Forma 4:");
+	saltarlinea();
+	imprimir("El IMC es: " + IMC(69,1.72));
+	var pesoS = prompt("Digite su peso");
+	var alturaS = prompt("Digite su altura");
+	saltarlinea();
+	imcS = IMC(pesoS,alturaS);
+	imprimir("El IMC solicitado es: " + imcS);
+	saltarlinea ();
+	imprimir("El IMC está ");
+	if (imcS < 18.5) {
+		imprimir("Abajo de lo Recomendado.");
+	}
+	if (imcS >= 18.5) {
+		if (imcS < 25) {
+			imprimir("Dentro de lo Recomendado");
+		}
+	}
+	if ((imcS >= 25) && (imcS < 30)) {
+		imprimir("Arriba de lo Recomendado");
+	}
+	if (imcS >= 30) {
+		imprimir("Superior a lo Recomendado")
+	}
+</script>

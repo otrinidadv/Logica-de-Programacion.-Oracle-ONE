@@ -1,0 +1,18 @@
+<meta charset="utf-8">
+<h1>Tablas de Multiplicar</h1>
+<script>
+	function saltarlinea() {
+		document.write("<br>");
+	}
+	function imprimir(texto) {
+		document.write(texto);
+	}
+	var valor = parseInt (prompt ("Introduzca el valor máximo a calcular"));
+	var producto = parseInt (prompt ("Introduzca el producto que quiere calcular"));
+	var multiplicador = 1;
+	while (multiplicador <= valor) {
+		imprimir (producto + " * " + multiplicador + " = " + (multiplicador * producto));
+		saltarlinea ();
+		multiplicador += 1;
+	}
+</script>

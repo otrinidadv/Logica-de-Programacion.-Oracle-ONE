@@ -1,0 +1,67 @@
+<meta charset="utf-8">
+Definiendo edad:
+<h1>
+	HTML
+</h1>
+La edad de Omar es ...
+<br>
+?
+<h1>
+	JavaScript
+</h1>
+<script>
+	function saltarlinea1() {
+		document.write("<br>");
+	}
+	function saltarlinea2() {
+		document.write("<br>");
+		document.write("<br>");
+	}
+	function imprimir(texto) {
+		document.write(texto);
+	}
+	function imprimir2(letras) {
+		saltarlinea1();
+		document.write(letras);
+		saltarlinea1();
+	}
+	var var1 = 2022;
+	// Comentarios en CSS
+	document.write("La edad de Omar es ...<br>");
+	document.write("<br>");
+	document.write("28 <br>");
+	document.write(15+5);
+	document.write("<br>20" + "22");
+	document.write("<br>Número " + 20);
+	document.write("<br>Operaciones en JavaScript<br>");
+	document.write(20+25+15/3);
+	document.write("<br>" + (20+25+15)/3);
+	document.write("<br>Concatenación: " + 20 + 25 + 15);
+	document.write("<br>Concatenación y Operaciones: " + (20 + 25 + 15));
+	document.write("<br>Variable " + (var1-2000) + (" dependiente"));
+	document.write("<br>Redefinición de variables");
+	var1 = 2030;
+	document.write("<br>Variable " + (var1-2000) + (" dependiente"));
+	operacion1 = (10+25+15)/3;
+	document.write("<br>Una operacion matemática redondeada puede ser " + Math.round(operacion1));
+	var var2 = 15;
+	var var3 = 20;
+	var var4 = 25;
+	var var5 = "variable 2";
+	var var6 = "variable 3";
+	var var7 = "variable 4";
+	operacion2 = (var2 + var3 + var4) / 3;
+	document.write("<br>La operacion resultante de " + var5 + ", " + var6 + ", " + var7 + " es " + operacion2);
+	document.write("Saltos de línea:");
+	var saltlin1 = "<br>";
+	var saltlin2 = "<br><br>";
+	document.write(saltlin1 + "Un salto de línea" + saltlin1 + "ejemplo");
+	document.write(saltlin1 + "Doble salto de línea" + saltlin2 + "ejemplo");
+	saltarlinea1();
+	document.write("Otro salto de línea");
+	saltarlinea2();
+	document.write("Doble salto de linea");
+	saltarlinea1();
+	imprimir("Impresion de texto en pantalla mediante funciones");
+	imprimir2("Funciones sobre funciones");
+</script>

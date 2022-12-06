@@ -1,0 +1,27 @@
+<canvas width="600" height="400"></canvas>
+<script>
+	var pantalla = document.querySelector("canvas");
+	var pincel = pantalla.getContext("2d");
+	pincel.fillStyle = "aqua";
+	pincel.fillRect(0,0,600,400);
+	function circunferencia(x,y,radio) {
+		pincel.fillStyle = "blue";
+		pincel.beginPath();
+		pincel.arc(x,y,radio,0,2*Math.PI);
+		pincel.fill();
+	}
+	function limpiar () {
+		pincel.clearRect(0,0,600,400);
+	}
+	/* function mensaje () {
+		console.log("Mostrar mensaje");
+	} */
+	var x = 0;
+	function actualizar () {
+		limpiar();
+		circunferencia(x,20,10);
+		x++;
+	}
+	setInterval (actualizar,5);
+	// setInterval(circunferencia(20,20,20,10),1000);
+</script>

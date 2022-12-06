@@ -1,0 +1,27 @@
+<meta charset="utf-8">
+<input/>
+<button>
+	Verificar
+</button>
+<script>
+	var secreto = [2,3,5,7];
+	var input = document.querySelector("input");
+	input.focus();
+	function verificar() {
+		var encontrado = false;
+		for (var i = 0; i < secreto.length; i++) {
+			if (parseInt(input.value) == secreto[i]) {
+				alert("Acertó");
+				encontrado = true;
+				break; 
+			}
+		}
+		if (encontrado == false) {
+			alert("Erró");
+		}	
+		input.value = "";
+		input.focus();
+	} 
+	var button = document.querySelector("button");
+	button.onclick = verificar;
+</script>

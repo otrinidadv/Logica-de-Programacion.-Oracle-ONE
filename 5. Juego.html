@@ -1,0 +1,24 @@
+<meta charset="utf-8">
+<h1>Juego</h1>
+<script>
+	function saltarlinea() {
+		document.write("<br>");
+	}
+	function imprimir(texto) {
+		document.write(texto);
+	}
+	var numpensado = Math.round(Math.random()*100);
+	var intentos = 3;
+	var contador = 1;
+	while (contador <= intentos) {
+		var numadivina = parseInt(prompt("Ingrese un número entre 0 y 100"));
+		if (numpensado == numadivina) {
+			alert("Numero Acertado");
+			break;
+		} else {
+			alert("Numero Incorrecto");
+		}
+		contador++;
+	}
+	imprimir ("El numero pensado era " + numpensado)
+</script>

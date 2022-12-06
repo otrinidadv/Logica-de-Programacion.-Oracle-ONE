@@ -1,0 +1,17 @@
+<meta charset="utf-8">
+<h1>Años de Mundiales FIFA</h1>
+<script>
+	function saltarlinea() {
+		document.write("<br>");
+	}
+	function imprimir(texto) {
+		document.write(texto);
+	}
+	var anho1 = 1930;
+	var limite = parseInt (prompt ("Ingrse el año actual"))
+	while (anho1 <= limite) {
+		imprimir ("Hubo Mundial FIFA en el año: " + anho1);
+		anho1 += 4;
+		saltarlinea ();
+	}
+</script>

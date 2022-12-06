@@ -1,0 +1,24 @@
+<meta charset="utf-8">
+<h1>Puntos Equipo de Futbol</h1>
+<script>
+	function saltarlinea() {
+		document.write("<br>");
+	}
+	function imprimir(texto) {
+		document.write(texto);
+	}
+	var victorias = parseInt(prompt("Número de Victorias"));
+	var empates = parseInt(prompt("Número de Empates"));
+	puntosTotal = victorias * 3 + empates;
+	imprimir("El número total de puntos es: " + puntosTotal);
+	saltarlinea();
+	if (puntosTotal > 28) {
+		imprimir("El equipo obtuvo mejores resultados");
+	}
+	if (puntosTotal < 28) {
+		imprimir("El equipo obtuvo peores resultados");
+	}
+	if (puntosTotal == 28) {
+		imprimir("El equipo obtuvo resultados iguales");
+	}
+</script>

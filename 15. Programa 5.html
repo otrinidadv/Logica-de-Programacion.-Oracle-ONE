@@ -1,0 +1,43 @@
+<canvas width="600" height="400"></canvas>
+<script>
+	var pantalla = document.querySelector("canvas");
+	var pincel = pantalla.getContext("2d");
+	pincel.fillStyle = "aqua";
+	pincel.fillRect(0,0,600,400);
+	var radio = 10;
+	var xrandom;
+	var yrandom;
+	function circunferencia(x,y,radio,color) {
+		pincel.fillStyle = color;
+		pincel.beginPath();
+		pincel.arc(x,y,radio,0,2*Math.PI);
+		pincel.fill();
+	}
+	function limpiar () {
+		pincel.clearRect(0,0,600,400);
+	}
+	var x = 0;
+	function objetivo (x,y) {
+		circunferencia(x,y,radio + 20,"red");
+		circunferencia(x,y,radio + 10,"white");
+		circunferencia(x,y,radio,"red");
+	}
+	function posicion (maximo) {
+		return Math.floor(Math.random()*maximo);
+	}
+	function actualizar () {
+		limpiar();
+		xrandom = posicion(600);
+		yrandom = posicion(400);
+		objetivo(xrandom,yrandom);
+	}
+	setInterval(actualizar,5000);
+	function disparar(evento) {
+		var x = evento.pageX - pantalla.offsetLeft;
+		var y = evento.pageY - pantalla.offsetTop;
+		if ((x < xrandom + radio) && (x > xrandom - radio) && (y < yrandom + radio) && (y > yrandom - radio)) {
+			alert("Acertaste");
+		}
+	}
+	pantalla.onclick = disparar;
+</script>
